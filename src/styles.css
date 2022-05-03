@@ -98,10 +98,12 @@ select {
 
 .menu-element:hover {
   cursor: pointer;
+  font-weight: 900;
 }
 
-.menu-element:first-child {
-  font-weight: 900;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .log-in {
@@ -116,6 +118,8 @@ select {
 
 .log-in:hover {
   cursor: pointer;
+  background-color: #833ae0;
+  color: #ffffff;
 }
 
 .container {
