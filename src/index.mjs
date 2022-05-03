@@ -5,7 +5,7 @@ import Controller from "./Controller/controller.mjs";
 const init = () => {
   const view = new View();
   const model = new Model();
-  const controller = new Controller(view, model);
+  const controller = new Controller(model, view);
 
   controller.init();
 };
