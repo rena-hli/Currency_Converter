@@ -9,98 +9,108 @@
     <title>Converter</title>
   </head>
   <body>
-    <header>
-      <div class="header-wrapper">
-        <img src="./assets/image/Bank_photo.png" alt="" id="bank" />
-        <div class="sections">
-          <ul>
-            <li>БАНК</li>
-            <li>БИЗНЕС</li>
-            <li>ИНВЕСТИЦИИ</li>
-            <li>СТРАХОВАНИЕ</li>
-            <li>МОБАЙЛ</li>
-            <li>ПУТЕШЕСТВИЯ</li>
-            <li>РАЗВЛЕЧЕНИЯ</li>
-          </ul>
+    <div id="root">
+      <div class="header">
+        <img class="bank-img" src="./assets/image/logo.png" alt="logo" />
+        <div class="menu">
+          <div class="menu-element">БАНК</div>
+          <div class="menu-element">БИЗНЕС</div>
+          <div class="menu-element">ИНВЕСТИЦИИ</div>
+          <div class="menu-element">СТРАХОВАНИЕ</div>
+          <div class="menu-element">МОБАЙЛ</div>
+          <div class="menu-element">ПУТЕШЕСТВИЯ</div>
+          <div class="menu-element">РАЗВЛЕЧЕНИЯ</div>
         </div>
-        <div class="login-btn-wrapper">
-          <button class="login-btn">ВОЙТИ</button>
+        <button class="log-in">ВОЙТИ</button>
+      </div>
+      <div class="container">
+        <div class="converter-title-wrapper">
+          <p class="converter-title">Конвертер валют онлайн</p>
         </div>
-      </div>
-    </header>
-    <div class="main">
-      <div class="heading-wrapper">
-        <p class="heading">Конвертер валют онлайн</p>
-      </div>
-      <div class="content">
-        <div class="left-converter-wrapper">
-          <p class="left-message">У меня есть</p>
-          <div class="selections">
-            <div class="selected-item">
-              <label for="left-rub" class="input-label">RUB</label>
+        <div class="converters">
+          <div class="converter-box" id="left-converter">
+            <div class="message">У меня есть</div>
+            <div class="buttons-box" id="leftButton">
               <input
-                id="left-rub"
+                class="checked-inputs"
+                name="fromLeft"
+                id="left-0"
                 type="radio"
-                name="left-rub"
-                value="RUB"
                 checked="checked"
               />
-            </div>
-            <div class="selected-item">
-              <label for="radio-2" class="input-label">USD</label>
-              <input id="radio-2" type="radio" name="radio1" value="USD" />
-            </div>
-            <div class="selected-item">
-              <label for="radio-3" class="input-label">EUR</label>
-              <input id="radio-3" type="radio" name="radio1" value="EUR" />
-            </div>
-            <div class="selected-item">
-              <label for="radio-4" class="input-label">AZN</label>
-              <input id="radio-4" type="radio" name="radio1" value="AZN" />
-            </div>
-          </div>
-          <div class="left-currency">
-            <input type="number" class="money-input" />
-            <div>
-              <p class="converter-text" id="rateFrom"></p>
-            </div>
-          </div>
-        </div>
-        <div class="right-converter-wrapper">
-          <p class="right-message">Хочу приобрести</p>
-          <div class="selections">
-            <div class="selected-item">
-              <label for="radio-5" class="input-label">RUB</label>
-              <input id="radio-5" type="radio" name="radio2" value="RUB" />
-            </div>
-            <div class="selected-item">
-              <label for="radio-6" class="input-label">USD</label>
+              <label class="checked-labels" for="left-0">RUB</label>
               <input
-                id="radio-6"
+                class="checked-inputs"
+                name="fromLeft"
+                id="left-1"
                 type="radio"
-                name="radio2"
-                value="USD"
+              />
+              <label class="checked-labels" for="left-1">USD</label>
+              <input
+                class="checked-inputs"
+                name="fromLeft"
+                id="left-2"
+                type="radio"
+              />
+              <label class="checked-labels" for="left-2">TRY</label>
+              <input
+                class="checked-inputs"
+                name="fromLeft"
+                id="left-3"
+                type="radio"
+              />
+              <label class="checked-labels" for="left-3">AZN</label>
+            </div>
+            <div class="inputRate-wrapper">
+              <input
+                class="converters-input active"
+                id="left-input"
+                type="number"
+                value="1"
+              />
+              <div class="rate" id="left-rate"></div>
+            </div>
+          </div>
+          <div class="converter-box" id="right-converter">
+            <div class="message">Хочу приобрести</div>
+            <div class="buttons-box" id="rightButtons">
+              <input
+                class="checked-inputs"
+                name="toRight"
+                id="right-0"
+                type="radio"
+              />
+              <label class="checked-labels" for="right-0">RUB</label>
+              <input
+                class="checked-inputs"
+                name="toRight"
+                id="right-1"
+                type="radio"
                 checked="checked"
               />
+              <label class="checked-labels" for="right-1">USD</label>
+              <input
+                class="checked-inputs"
+                name="toRight"
+                id="right-2"
+                type="radio"
+              />
+              <label class="checked-labels" for="right-2">TRY</label>
+              <input
+                class="checked-inputs"
+                name="toRight"
+                id="right-3"
+                type="radio"
+              />
+              <label class="checked-labels" for="right-3">AZN</label>
             </div>
-            <div class="selected-item">
-              <label for="radio-7" class="input-label">EUR</label>
-              <input id="radio-7" type="radio" name="radio2" value="EUR" />
-            </div>
-            <div class="selected-item">
-              <label for="radio-8" class="input-label">AZN</label>
-              <input id="radio-8" type="radio" name="radio2" value="AZN" />
-            </div>
-          </div>
-          <div class="money-text">
-            <input type="number" class="money-input" />
-            <div>
-              <p class="converter-text" id="rateIn"></p>
+            <div class="inputRate-wrapper">
+              <input class="converters-input" id="right-input" type="number" />
+              <div class="rate" id="right-rate"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script type="module" src="./index.mjs" defer></script>
   </body>
 </html>

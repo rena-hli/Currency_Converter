@@ -69,24 +69,72 @@ select {
   font: inherit;
 }
 
-/* --------------------------------styles-------------------------------- */
-
+/* ---------------------------STYLING---------------------------*/
 .header {
-  display: flex;
   min-height: 50px;
   width: 100%;
-  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #f5f5f6;
   line-height: 1;
+}
+
+.bank-img {
+  height: 25px;
+  width: 90px;
+  margin-left: 100px;
+}
+
+.menu {
+  display: flex;
+  padding: 6px;
+  font-size: 11px;
   justify-content: space-between;
+  width: 55%;
+  flex-wrap: wrap;
+  line-height: 1.5;
+}
+
+.menu-element:hover {
+  cursor: pointer;
+}
+
+.menu-element:first-child {
+  font-weight: 900;
+}
+
+.log-in {
+  margin-right: 100px;
+  background-color: #ffffff;
+  height: 35px;
+  font-size: 11px;
+  font-weight: 500;
+  border: 0;
+  border-radius: 4px;
+}
+
+.log-in:hover {
+  cursor: pointer;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto;
-  height: 80vh;
+}
+
+.converter-title-wrapper {
+  height: 100px;
+  width: 560px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.converter-title {
+  font-size: 36px;
+  font-weight: 700;
 }
 
 .converters {
@@ -100,36 +148,59 @@ select {
   width: 230px;
 }
 
-.converter-title {
-  position: relative;
-  right: 70px;
-  font-size: 36px;
-  margin-top: 50px;
+.message {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #9f9f9f;
+  padding-bottom: 10px;
 }
 
 .converters-input {
   border: 0;
   outline: none;
-  font-size: 36px;
   width: 200px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.rate {
+  font-size: 12px;
+  color: #c6c6c6;
+  margin: 5px;
 }
 
 .inputRate-wrapper {
-  border: 1px solid gainsboro;
+  border: 1px solid #e5e5e5;
   border-radius: 5px;
   overflow: hidden;
   padding: 0 10px;
   width: 223px;
 }
 
+.buttons-box {
+  margin-bottom: 5px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  width: 223px;
+  /* width: 236px; */
+  overflow: hidden;
+  font-size: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.converters-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .checked-labels {
   position: relative;
-  left: -1px;
-  border: 1px solid gainsboro;
-  height: 5px;
+  /* left: -1px; */
+  border: 1px solid #e5e5e5;
   padding: 6px 16px;
   cursor: pointer;
-  transition: 0.5s;
 }
 
 .checked-inputs {
@@ -140,55 +211,4 @@ select {
   background-color: #833ae0;
   color: white;
   border: 0;
-}
-
-.buttons-box {
-  margin-bottom: 5px;
-  border: 1px solid gainsboro;
-  width: 223px;
-  border-radius: 5px;
-  overflow: hidden;
-  font-size: 12px;
-  margin-bottom: 15px;
-}
-
-.bank-img {
-  background-image: url("./assets/photo/Asset\ 1@3x\ 1.png");
-  height: 25px;
-  width: 90px;
-  background-repeat: no-repeat;
-  margin-left: 100px;
-}
-
-.paragraph:first-child {
-  font-weight: 900;
-}
-
-.paragraphs {
-  display: flex;
-  padding: 6px;
-  font-size: 11px;
-  justify-content: space-between;
-  width: 55%;
-  flex-wrap: wrap;
-  line-height: 1.5;
-}
-
-.log-in {
-  margin-right: 100px;
-  background-color: #ffffff;
-  height: 35px;
-  margin-top: -5px;
-  border: 0;
-  border-radius: 10px;
-}
-
-.converters-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-.rate {
-  opacity: 0.5;
-  font-size: 12px;
-  margin: 5px;
 }
