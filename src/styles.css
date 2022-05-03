@@ -68,3 +68,127 @@ textarea,
 select {
   font: inherit;
 }
+
+/* --------------------------------styles-------------------------------- */
+
+.header {
+  display: flex;
+  min-height: 50px;
+  width: 100%;
+  padding: 14px;
+  background-color: #f5f5f6;
+  line-height: 1;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  height: 80vh;
+}
+
+.converters {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+}
+
+.converter-box {
+  margin: 20px;
+  width: 230px;
+}
+
+.converter-title {
+  position: relative;
+  right: 70px;
+  font-size: 36px;
+  margin-top: 50px;
+}
+
+.converters-input {
+  border: 0;
+  outline: none;
+  font-size: 36px;
+  width: 200px;
+}
+
+.inputRate-wrapper {
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 0 10px;
+  width: 223px;
+}
+
+.checked-labels {
+  position: relative;
+  left: -1px;
+  border: 1px solid gainsboro;
+  height: 5px;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.checked-inputs {
+  display: none;
+}
+
+.checked-inputs:checked + .checked-labels {
+  background-color: #833ae0;
+  color: white;
+  border: 0;
+}
+
+.buttons-box {
+  margin-bottom: 5px;
+  border: 1px solid gainsboro;
+  width: 223px;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.bank-img {
+  background-image: url("./assets/photo/Asset\ 1@3x\ 1.png");
+  height: 25px;
+  width: 90px;
+  background-repeat: no-repeat;
+  margin-left: 100px;
+}
+
+.paragraph:first-child {
+  font-weight: 900;
+}
+
+.paragraphs {
+  display: flex;
+  padding: 6px;
+  font-size: 11px;
+  justify-content: space-between;
+  width: 55%;
+  flex-wrap: wrap;
+  line-height: 1.5;
+}
+
+.log-in {
+  margin-right: 100px;
+  background-color: #ffffff;
+  height: 35px;
+  margin-top: -5px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.converters-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.rate {
+  opacity: 0.5;
+  font-size: 12px;
+  margin: 5px;
+}
